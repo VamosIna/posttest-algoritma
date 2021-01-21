@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image: url('img/Humaaans\ -\ 3\ Characters.png');
+    background-size: cover;
+    /* opacity: 0.5; */
+    height: 110vh;
+    text-align: center;
+    margin-top: -100px ;
+}
+.jumbotron .display-4 {
+    color: black;
+    margin-top: 200px;
+}
+.jumbotron p {
+    color: black;
+}
