@@ -1,47 +1,99 @@
-//PROMPT
 
+// If-Else hari esok
+function Inputhari(){
+    let hari = prompt('masukan hari');
+    if(hari == 'senin'){
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI SELASA LOH";
+    }else if(hari=='selasa'){
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI RABU";
+    }else if(hari=='rabu'){
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI KAMIS";
+    }else if(hari=='kamis'){
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI JUMAT";
+    }else if(hari=='jumat'){
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI SABTU";
+    }else if(hari=='sabtu'){
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI MINGGU";
+    }else if(hari=='minggu'){
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI SENIN";
+    }else{
+        alert("masukan hari yang benar yaw, check lagi yukk!!");
+    }
+}
 
-
-// const alas = prompt('Masukkan alas ');
-// const tinggi = prompt('Masukkan tinggi segitiga');
-// const luas = 0.5 * parseInt(alas) * parseInt(tinggi);
-// console.log(luas);
-
-function inputJeje() {
-    let jariJari = prompt("Masukan jari-jari")
-    let phi = 3.14
+// switch case
+function InputHaris(){
+    let hari = prompt('masukan hari');
     
-    document.querySelector("#hasilLingkaran").innerHTML =
-    "hasilnya " + phi * jariJari * jariJari;
+    switch(hari){
+        case 'senin':
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI SELASA LOH";
+        break;
+        case 'selasa':
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI RABU LOH";
+        break;
+        case 'rabu':
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI KAMIS LOH";
+        break;
+        case 'kamis':
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI JUMAT LOH";
+        break;
+        case 'jumat':
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI SABTU LOH";
+        break;
+        case 'sabtu':
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI MINGGU LOH";
+        break;
+        case 'minggu':
+        document.querySelector("#hasilFunction").innerHTML = "BESOK HARI SENIN LOH";
+        break;
+        default:
+            alert('SALAH NIH, YUK DICHECK LAGI !!');
+    }
 }
-
-function inputSegi(){
-    const alas = prompt('Masukkan alas ');
-    const tinggi = prompt('Masukkan tinggi segitiga');
-    const hasil = 0.5 * alas * tinggi;
-    document.querySelector("#hasilSegi").innerHTML =
-    "hasilnya " + hasil;
+//perulangan 2B
+//for
+function perulanganFor(){
+    let input = prompt('nilai');
+    check = parseInt(input);
+    let textx= "";
+    for (let a = 0; a <= check; a++) {
+        if(a%2 == 0){
+             console.log(a);
+             textx +="Taraa hasilnyaa adalahhh = " +a+ "<br>";        
+        };
+        document.querySelector("#hasilFunction").innerHTML = textx;
+    }
 }
-
-
-let pamungkasAlbum = {
-    namalengkap :"Rizky Rahmahadian Pamungkas",
-    namaalbum : "Solipsism 2.0",
-    tahun :"2020",
-    tersedia :"deezer,yutub",
-    label :" 26 juni 2020"
-}; 
-console.log(pamungkasAlbum)
-
-const Solipsism = [
-
-    "Queen of the Hearts",
-    "Intentions",
-    "Be okay Again Today",
-    "Be my friend",
-    "deeper"
-]
-Solipsism.forEach(function(lagu){
-    console.log(lagu)
-})
-
+//2C
+function forGanjil(){
+    let input = prompt('nilai');
+    check = parseInt(input);
+    let textx= "";
+    for (let a = 0; a <= check; a++) {
+        if(a%2 != 0){
+             console.log(a);
+             textx +="Taraa hasilnyaa adalahhh = " +a+ "<br>";        
+        };
+        document.querySelector("#hasilFunction").innerHTML = textx;
+    }
+}
+//2D
+function primaGaya(){
+    let input = prompt('nilai');
+    check = parseInt(input);
+    let textx= "";
+    for(a=0; a <= check; a++){
+    dibagi = 0;
+    for(b=1; b <= a; b++) {
+        if(a%b == 0){
+            dibagi++;
+        };
+    };
+    if (dibagi == 2){
+        console.log(a);
+        textx +="Taraa hasilnyaa adalahhh = " +a+ "<br>"; 
+    };
+        document.querySelector("#hasilFunction").innerHTML = textx;
+    }
+}
